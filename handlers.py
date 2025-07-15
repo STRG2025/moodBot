@@ -61,7 +61,7 @@ async def start_command(message: types.Message):
         await db.update_notification_settings(message.from_user.id, True)
         await message.answer(
             "Привет! Я бот для отслеживания настроения.\n\n"
-            "Я буду ежедневно спрашивать о твоем настроении в 10-00 время.\n"
+            "Я буду ежедневно спрашивать о твоем настроении в 9-00\n"
         )
         await send_mood_keyboard(message.chat.id)
     except Exception as e:
